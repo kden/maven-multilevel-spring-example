@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"
+>
+    <bean id="rootFtlLoader" class="freemarker.cache.ClassTemplateLoader">
+        <constructor-arg type="java.lang.Class"
+                         value="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer"/>
+        <constructor-arg type="java.lang.String" value="/"/>
+    </bean>
+    <bean id="macrosFtlLoader" class="freemarker.cache.ClassTemplateLoader">
+        <constructor-arg type="java.lang.Class"
+                         value="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer"/>
+        <constructor-arg type="java.lang.String" value="/macros"/>
+    </bean>
+    <bean id="templatesFtlLoader" class="freemarker.cache.ClassTemplateLoader">
+        <constructor-arg type="java.lang.Class"
+                         value="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer"/>
+        <constructor-arg type="java.lang.String" value="/templates"/>
+    </bean>
+    <bean id="multiTemplateLoader" class="freemarker.cache.MultiTemplateLoader">
+        <constructor-arg>
+            <array>
+                <ref bean="rootFtlLoader"/>
+                <ref bean="macrosFtlLoader"/>
+                <ref bean="templatesFtlLoader"/>
+            </array>
+        </constructor-arg>
+    </bean>
+
+    <bean id="initFreeConfig" class="freemarker.template.Configuration">
+        <property name="templateLoader" ref="multiTemplateLoader"/>
+
+    </bean>
+
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="configuration" ref="initFreeConfig"/>
+        <property name="freemarkerVariables">
+            <map>
+                <entry key="xml_escape">
+                    <bean class="freemarker.template.utility.XmlEscape"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="cache" value="true"/>
+        <property name="prefix" value=""/>
+        <property name="suffix" value=".ftl"/>
+        <!-- if you want to use the Spring FreeMarker macros, set this property to true -->
+        <property name="exposeSpringMacroHelpers" value="true"/>
+    </bean>
+
+
+
+</beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="myproject-code" />
+        <module name="myproject-config" />
+        <module name="myproject-templates" />
+        <module name="myproject-webapp" />
+        <module name="organization-code" />
+        <module name="organization-config" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="myproject" target="1.8" />
+      <module name="myproject-code" target="1.8" />
+      <module name="myproject-config" target="1.8" />
+      <module name="myproject-templates" target="1.8" />
+      <module name="myproject-webapp" target="1.8" />
+      <module name="organization" target="1.8" />
+      <module name="organization-code" target="1.8" />
+      <module name="organization-config" target="1.8" />
+      <module name="spring-project" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

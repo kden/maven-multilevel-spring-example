@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.example</groupId>
+        <artifactId>spring-project</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>myproject</artifactId>
+    <packaging>pom</packaging>
+    <name>MyProject - Base POM</name>
+
+
+    <!-- MODULES -->
+    <modules>
+        <module>myproject-code</module>
+        <module>myproject-config</module>
+        <module>myproject-templates</module>
+        <module>myproject-webapp</module>
+
+    </modules>
+
+    <description>MyProject Code and Configuration</description>
+
+
+
+    <properties>
+        <spring.version>4.3.10.RELEASE</spring.version>
+        <freemarker.version>2.3.23</freemarker.version>
+
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>organization-config</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>organization-code</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.23</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

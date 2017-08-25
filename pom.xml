@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.example</groupId>
+    <artifactId>spring-project</artifactId>
+    <packaging>pom</packaging>
+    <description>Multi-module Spring Project</description>
+    <name>spring-project</name>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <spring.version>4.3.10.RELEASE</spring.version>
+        <freemarker.version>2.3.23</freemarker.version>
+        <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+
+    </properties>
+
+    <!-- MODULES -->
+    <modules>
+        <module>organization</module>
+        <module>myproject</module>
+    </modules>
+    <build>
+        <!-- FUNCTIONS -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+    </dependencies>
+</project>

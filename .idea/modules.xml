@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/myproject/myproject.iml" filepath="$PROJECT_DIR$/myproject/myproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myproject/myproject-code/myproject-code.iml" filepath="$PROJECT_DIR$/myproject/myproject-code/myproject-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myproject/myproject-config/myproject-config.iml" filepath="$PROJECT_DIR$/myproject/myproject-config/myproject-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myproject/myproject-templates/myproject-templates.iml" filepath="$PROJECT_DIR$/myproject/myproject-templates/myproject-templates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myproject/myproject-webapp/myproject-webapp.iml" filepath="$PROJECT_DIR$/myproject/myproject-webapp/myproject-webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/organization/organization.iml" filepath="$PROJECT_DIR$/organization/organization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/organization/organization-code/organization-code.iml" filepath="$PROJECT_DIR$/organization/organization-code/organization-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/organization/organization-config/organization-config.iml" filepath="$PROJECT_DIR$/organization/organization-config/organization-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-project.iml" filepath="$PROJECT_DIR$/spring-project.iml" />
+    </modules>
+  </component>
+</project>
